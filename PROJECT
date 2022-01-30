@@ -1,0 +1,26 @@
+domain: rmb938.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: multi-group-test
+repo: github.com/rmb938/multi-group-test
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: rmb938.com
+  group: foo
+  kind: Bar
+  path: github.com/rmb938/multi-group-test/apis/foo/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: rmb938.com
+  group: fiz
+  kind: Bar
+  path: github.com/rmb938/multi-group-test/apis/fiz/v1alpha1
+  version: v1alpha1
+version: "3"
